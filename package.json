@@ -1,0 +1,42 @@
+{
+  "name": "gherking-template",
+  "version": "0.0.1",
+  "description": "This repository is a template to create precompilers for GherKing.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha ./test/*.spec.js ./test/builtIn/*.spec.js",
+    "coverage": "istanbul cover --include-all-sources ./node_modules/mocha/bin/_mocha --root ./lib -- ./test/*.spec.js ./test/builtIn/*.spec.js",
+    "travis": "istanbul cover --include-all-sources ./node_modules/mocha/bin/_mocha --root ./lib --report lcovonly -- ./test/*.spec.js ./test/builtIn/*.spec.js -R spec && cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gherking/gherking-template.git"
+  },
+  "keywords": [
+    "gherkin",
+    "gherking",
+    "precompiler",
+    "feature",
+    "file"
+  ],
+  "author": "GherKing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gherking/gherking-template/issues"
+  },
+  "engines": {
+    "node": ">=6.0.0",
+    "npm": ">=3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.0"
+  },
+  "homepage": "https://github.com/gherking/gherking-template#readme",
+  "dependencies": {
+    "gherkin-ast": "^1.1.0",
+    "gherkin-precompiler": "^1.3.0"
+  }
+}
