@@ -59,3 +59,8 @@ typings/
 
 .vscode
 .idea
+/reports
+/coverage
+/dist
+/docs
+yarn.lock
