@@ -45,3 +45,5 @@ save('./features/dist/login.feature', ast, {
 ```
 
 For detailed documentation see the [TypeDocs documentation](https://gherking.github.io/gpc-template/).
+
+This package uses [debug](https://www.npmjs.com/package/debug) for logging.
