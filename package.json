@@ -2,7 +2,7 @@
   "name": "gpc-template",
   "version": "0.0.1",
   "description": "This repository is a template to create precompilers for GherKing.",
-  "main": "index.ts",
+  "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "build": "npm run buildUpdate && npm test && npm run typedoc",

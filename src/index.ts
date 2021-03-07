@@ -1,16 +1,20 @@
 import { PreCompiler } from "gherking";
 import { /* TODO */ } from "gherkin-ast";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const debug = require("debug")("gpc:template");
 
 // TODO: Add implementation of your precompiler
-export class Template implements PreCompiler {
+class Template implements PreCompiler {
     constructor() {
         debug("Intialize");
     }
 }
+
+// IMPORTANT: the precompiler class MUST be the export!
+export = Template;
 /*
  * @example:
- * export class MyPrecompiler implements PreCompiler {
+ * class MyPrecompiler implements PreCompiler {
  *   constructor(config) {
  *     super();
  *     this.config = config;
@@ -20,4 +24,5 @@ export class Template implements PreCompiler {
  *     // doing smth with scenario
  *   }
  * }
+ * export = MyPrecompiler
  */
