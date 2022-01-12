@@ -13,16 +13,16 @@ This repository is a template to create precompilers for GherKing.
 ```javascript
 'use strict';
 const compiler = require('gherking');
-const {Template} = require('gpc-template');
+const Template = require('gpc-template');
 
-let ast = compiler.load('./features/src/login.feature');
+let ast = await compiler.load('./features/src/login.feature');
 ast = compiler.process(
     ast,
     new Template({
         // config
     })
 );
-compiler.save('./features/dist/login.feature', ast, {
+await compiler.save('./features/dist/login.feature', ast, {
     lineBreak: '\r\n'
 });
 ```
@@ -30,20 +30,25 @@ compiler.save('./features/dist/login.feature', ast, {
 ```typescript
 'use strict';
 import {load, process, save} from "gherking";
-import {Template} from "gpc-template";
+import Template = require("gpc-template");
 
-let ast = load("./features/src/login.feature");
+let ast = await load("./features/src/login.feature");
 ast = process(
     ast,
     new Template({
         // config
     })
 );
-save('./features/dist/login.feature', ast, {
+await save('./features/dist/login.feature', ast, {
     lineBreak: '\r\n'
 });
 ```
+## Other
+
+This package uses [debug](https://www.npmjs.com/package/debug) for logging, use `gpc:template` :
+
+```shell
+DEBUG=gpc:template* gherking ...
+```
 
 For detailed documentation see the [TypeDocs documentation](https://gherking.github.io/gpc-template/).
-
-This package uses [debug](https://www.npmjs.com/package/debug) for logging.
