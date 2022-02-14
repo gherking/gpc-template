@@ -1,10 +1,6 @@
 # gpc-template
 
-![Downloads](https://img.shields.io/npm/dw/gpc-template?style=flat-square)
-![Version@npm](https://img.shields.io/npm/v/gpc-template?label=version%40npm&style=flat-square)
-![Version@git](https://img.shields.io/github/package-json/v/gherking/gpc-template/master?label=version%40git&style=flat-square)
-![CI](https://img.shields.io/github/workflow/status/gherking/gpc-template/CI/master?label=ci&style=flat-square)
-![Docs](https://img.shields.io/github/workflow/status/gherking/gpc-template/Docs/master?label=docs&style=flat-square)
+![Downloads](https://img.shields.io/npm/dw/gpc-template?style=flat-square) ![Version@npm](https://img.shields.io/npm/v/gpc-template?label=version%40npm&style=flat-square) ![Version@git](https://img.shields.io/github/package-json/v/gherking/gpc-template/master?label=version%40git&style=flat-square) ![CI](https://img.shields.io/github/workflow/status/gherking/gpc-template/CI/master?label=ci&style=flat-square) ![Docs](https://img.shields.io/github/workflow/status/gherking/gpc-template/Docs/master?label=docs&style=flat-square)
 
 This repository is a template to create precompilers for GherKing.
 
