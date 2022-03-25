@@ -3,18 +3,37 @@ import { /* TODO */ } from "gherkin-ast";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const debug = require("debug")("gpc:template");
 
-// TODO: Add implementation of your precompiler
-class Template implements PreCompiler {
-    constructor() {
-        debug("Intialize");
-    }
+// TODO: define your configuration option, if necessary
+export interface Config {
+  option: string;
 }
 
-// IMPORTANT: the precompiler class MUST be the export!
-export = Template;
+// TODO: add default options
+const DEFAULT_CONFIG: Config = {
+  option: "OPTION"
+};
+
+// TODO: Add implementation of your precompiler
+export default class Template implements PreCompiler {
+  private config: Config;
+
+  constructor(config?: Partial<Config>) {
+    debug("Intialize");
+    this.config = {
+      ...DEFAULT_CONFIG,
+      ...(config || {}),
+    };
+  }
+
+  onFeature(): void {
+    // TODO: remove
+    console.log(this.config);
+  }
+}
+
 /*
  * @example:
- * class MyPrecompiler implements PreCompiler {
+ * export default class MyPrecompiler implements PreCompiler {
  *   constructor(config) {
  *     super();
  *     this.config = config;
@@ -24,5 +43,4 @@ export = Template;
  *     // doing smth with scenario
  *   }
  * }
- * export = MyPrecompiler
  */

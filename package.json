@@ -48,6 +48,7 @@
     "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.19.0",
+    "husky": "^7.0.4",
     "jest": "^26.6.3",
     "jest-junit": "^13.0.0",
     "rimraf": "^3.0.2",
@@ -57,8 +58,8 @@
   },
   "dependencies": {
     "debug": "^4.3.1",
-    "gherkin-ast": "^3.2.1",
-    "gherking": "^2.0.0"
+    "gherkin-ast": "^3.3.0",
+    "gherking": "^2.1.0"
   },
   "jest": {
     "reporters": [

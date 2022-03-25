@@ -9,36 +9,37 @@ This repository is a template to create precompilers for GherKing.
 ```javascript
 'use strict';
 const compiler = require('gherking');
-const Template = require('gpc-template');
+const { default: Template } = require('gpc-template');
 
 let ast = await compiler.load('./features/src/login.feature');
 ast = compiler.process(
-    ast,
-    new Template({
-        // config
-    })
+  ast,
+  new Template({
+    // config
+  })
 );
 await compiler.save('./features/dist/login.feature', ast, {
-    lineBreak: '\r\n'
+  lineBreak: '\r\n'
 });
 ```
 
 ```typescript
 'use strict';
 import {load, process, save} from "gherking";
-import Template = require("gpc-template");
+import Template from "gpc-template";
 
 let ast = await load("./features/src/login.feature");
 ast = process(
-    ast,
-    new Template({
-        // config
-    })
+  ast,
+  new Template({
+    // config
+  })
 );
 await save('./features/dist/login.feature', ast, {
-    lineBreak: '\r\n'
+  lineBreak: '\r\n'
 });
 ```
+
 ## Other
 
 This package uses [debug](https://www.npmjs.com/package/debug) for logging, use `gpc:template` :
