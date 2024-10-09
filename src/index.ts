@@ -1,6 +1,6 @@
 import { PreCompiler } from "gherking";
 import { /* TODO */ } from "gherkin-ast";
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+ 
 const debug = require("debug")("gpc:template");
 
 // TODO: define your configuration option, if necessary

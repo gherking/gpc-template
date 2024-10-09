@@ -1,5 +1,5 @@
-import { load, process } from "gherking";
 import { Document, pruneID } from "gherkin-ast";
+import { load, process } from "gherking";
 import Template, { Config } from "../src";
 
 const cleanLocationInfo = (ast: Document): void => {
@@ -18,7 +18,7 @@ const loadTestFeatureFile = async (folder: "input" | "expected", file: string): 
 const checkConfig = async (testCase: string, config: Partial<Config>): Promise<void> => {
   const input = await loadTestFeatureFile("input", `${testCase}.feature`);
   const expected = await loadTestFeatureFile("expected", `${testCase}.feature`);
-  const actual = process(input, new Template(config));
+  const actual = await process(input, new Template(config));
 
   cleanLocationInfo(actual[0]);
   delete expected.uri;
